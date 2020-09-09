@@ -9,6 +9,10 @@ namespace ZUS_rekrutacja
         static void Main(string[] args)
         {
 
+            var apiPolaczenie = new ApiPolaczenie();
+
+            apiPolaczenie.CallWebService();
+
             var daneWejsciowe = new DaneWejsciowe()
             {
                 DataWystawienia = new DateTime(2014, 11, 1),
