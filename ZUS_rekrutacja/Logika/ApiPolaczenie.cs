@@ -63,38 +63,7 @@ namespace ZUS_rekrutacja.Logika
 
         private XmlDocument TworzXML()
         {
-        //XNamespace soap = "http://www.w3.org/2003/05/soap-envelope";
-        //XNamespace ns = "http://CIS/BIR/PUBL/2014/07";
-        //XNamespace wsa = "http://www.w3.org/2005/08/addressing";
-        //string wsaAction = "http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/Zaloguj";
-        //string wsaTo = "https://wyszukiwarkaregontest.stat.gov.pl/wsBIR/UslugaBIRzewnPubl.svc";
-        //string klucz = "abcde12345abcde12345";
 
-
-        //var xDocument = new XDocument(
-        //    new XElement(soap + "Envelope", new XAttribute(XNamespace.Xmlns + "soap", soap), new XAttribute(XNamespace.Xmlns + "ns", ns),
-        //        new XElement(soap + "Header", new XAttribute(XNamespace.Xmlns + "wsa", wsa),
-        //            new XElement(wsa + "Action", wsaAction),
-        //            new XElement(wsa + "To", wsaTo)),
-        //        new XElement(soap + "Body",
-        //        new XElement(ns + "Zaloguj",
-        //            new XElement(ns + "pKluczUzytkownika", klucz))))
-        //    );
-
-        //string xmlDocument = xDocument.ToString();
-
-        //var xDocument1 = new XDocument(
-        //    new XElement(soap + "Envelope", new XAttribute(XNamespace.Xmlns + "soap", soap), new XAttribute(XNamespace.Xmlns + "ns", ns),
-        //        new XElement(soap + "Header", new XAttribute(XNamespace.Xmlns + "wsa", wsa),
-        //            new XElement(wsa + "Action", wsaAction),
-        //            new XElement(wsa + "To", wsaTo)),
-        //        new XElement(soap + "Body",
-        //        new XElement(ns + "Zaloguj",
-        //            new XElement(ns + "pKluczUzytkownika", klucz))))
-        //    );
-
-        //string xmlDocument1 = xDocument.ToString();
-        
             string document = "<s11:Envelope xmlns:s11='http://schemas.xmlsoap.org/soap/envelope/'>\n" +
                                 "   <s11:Body>\n" +
                                 "       <ns1:pobierzOswiadczenie xmlns:ns1='http://zus.pl/b2b/zus/channel/gabinetowe' />\n" +
