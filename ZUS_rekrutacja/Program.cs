@@ -21,7 +21,6 @@ namespace ZUS_rekrutacja
                 PobytWSzpitaluOd = new DateTime(2014, 10, 20),
                 PobytWSzpitaluDo = new DateTime(2014, 11, 05)
             };
-
             var walidacjeZla = new Walidacje(daneWejsciowe);
 
             var walidacjaZla = walidacjeZla.WalidacjaDanychWejsciowych();

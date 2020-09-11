@@ -50,6 +50,8 @@ namespace ZUS_rekrutacja.Logika
             webZadanie.ContentType = "application/x-www-form-urlencoded";
             webZadanie.Method = "POST";
 
+            webZadanie.ServerCertificateValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+
             return webZadanie;
         }
 
@@ -70,9 +72,16 @@ namespace ZUS_rekrutacja.Logika
                                 "   </s11:Body>\n" +
                                 "</s11:Envelope>";
 
+            string document1 = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:gab=\"http://zus.gov.pl/b2b/zus/channel/gabinetowe\">\n" +
+                                "   <soapenv:Header/>\n" +
+                                "   <soapenv:Body>\n" +
+                                "       <gab:pobierzOswiadczenie/>\n" +
+                                "   </soapenv:Body>\n" +
+                                "</soapenv:Envelope>";
+
             XmlDocument soapEnvelopeDocument = new XmlDocument();
 
-            soapEnvelopeDocument.LoadXml(document);
+            soapEnvelopeDocument.LoadXml(document1);
 
             return soapEnvelopeDocument;
         }
