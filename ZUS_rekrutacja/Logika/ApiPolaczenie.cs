@@ -49,7 +49,6 @@ namespace ZUS_rekrutacja.Logika
             webZadanie.Accept = "text/xml";
             webZadanie.ContentType = "application/x-www-form-urlencoded";
             webZadanie.Method = "POST";
-
             webZadanie.ServerCertificateValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
 
             return webZadanie;
